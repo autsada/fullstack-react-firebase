@@ -1,0 +1,68 @@
+[debug] [2021-06-18T01:30:07.986Z] ----------------------------------------------------------------------
+[debug] [2021-06-18T01:30:07.992Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\autsa\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js functions:shell
+[debug] [2021-06-18T01:30:07.992Z] CLI Version:   9.10.2
+[debug] [2021-06-18T01:30:07.993Z] Platform:      win32
+[debug] [2021-06-18T01:30:07.993Z] Node Version:  v14.16.0
+[debug] [2021-06-18T01:30:08.003Z] Time:          Fri Jun 18 2021 08:30:07 GMT+0700 (Indochina Time)
+[debug] [2021-06-18T01:30:08.003Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-06-18T01:30:08.019Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2021-06-18T01:30:08.124Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-06-18T01:30:08.125Z] > authorizing via signed-in user (simplelearn.coder@gmail.com)
+[debug] [2021-06-18T01:30:08.126Z] [iam] checking project awesome-9bbcd for permissions ["firebase.projects.get"]
+[debug] [2021-06-18T01:30:08.132Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-06-18T01:30:08.134Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-06-18T01:30:08.409Z] <<< HTTP RESPONSE 200 {"date":"Fri, 18 Jun 2021 01:30:10 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-18T01:30:08.444Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/awesome-9bbcd:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2021-06-18T01:30:08.956Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2021-06-18T01:30:08.957Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2021-06-18T01:30:09.637Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 18 Jun 2021 01:30:12 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1040","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[warn] !  Your requested "node" version "12" doesn't match your global version "14" {"metadata":{"emulator":{"name":"functions"},"message":"Your requested \"node\" version \"12\" doesn't match your global version \"14\""}}
+[debug] [2021-06-18T01:30:09.747Z] defaultcredentials: writing to file C:\Users\autsa\AppData\Roaming\firebase\simplelearn_coder_gmail.com_application_default_credentials.json
+[debug] [2021-06-18T01:30:09.752Z] DEBUG: Setting GAC to C:\Users\autsa\AppData\Roaming\firebase\simplelearn_coder_gmail.com_application_default_credentials.json
+[debug] [2021-06-18T01:30:09.754Z] > refreshing access token with scopes: []
+[debug] [2021-06-18T01:30:09.754Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-06-18T01:30:09.918Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Fri, 18 Jun 2021 01:30:12 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-18T01:30:09.939Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/awesome-9bbcd/adminSdkConfig [none]
+[debug] [2021-06-18T01:30:10.562Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/awesome-9bbcd/adminSdkConfig 200
+[debug] [2021-06-18T01:30:10.562Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/awesome-9bbcd/adminSdkConfig {"projectId":"awesome-9bbcd","databaseURL":"https://awesome-9bbcd.firebaseio.com","storageBucket":"awesome-9bbcd.appspot.com","locationId":"us-central"}
+[debug] [2021-06-18T01:30:10.587Z] [functions] Watching "C:\Users\autsa\OneDrive\Desktop\WebApp\Social Media\SimpleCoder\udemy\awesome\awesome-original\functions" for Cloud Functions...
+[debug] [2021-06-18T01:30:10.642Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2021-06-18T01:30:10.642Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2021-06-18T01:30:10.643Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2021-06-18T01:30:10.644Z] DEBUG: [worker-~diagnostic~-35ca5bfa-9126-43e5-b7cf-3df391693e54]: Assigning socketPath: \\?\pipe\C:\Users\autsa\OneDrive\Desktop\WebApp\Social Media\SimpleCoder\udemy\awesome\awesome-original\functions\8592
+[debug] [2021-06-18T01:30:10.646Z] DEBUG: [worker-~diagnostic~-35ca5bfa-9126-43e5-b7cf-3df391693e54]: BUSY
+[debug] [2021-06-18T01:30:11.522Z] DEBUG: [runtime-status] [8592] Functions runtime initialized. {"cwd":"C:\\Users\\autsa\\OneDrive\\Desktop\\WebApp\\Social Media\\SimpleCoder\\udemy\\awesome\\awesome-original\\functions","node_version":"14.16.0"}
+[debug] [2021-06-18T01:30:11.525Z] DEBUG: [runtime-status] [8592] Disabled runtime features: undefined
+[debug] [2021-06-18T01:30:11.541Z] DEBUG: [runtime-status] [8592] Resolved module firebase-admin {"declared":true,"installed":true,"version":"9.3.0","resolution":"C:\\Users\\autsa\\OneDrive\\Desktop\\WebApp\\Social Media\\SimpleCoder\\udemy\\awesome\\awesome-original\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2021-06-18T01:30:11.548Z] DEBUG: [runtime-status] [8592] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Users\\autsa\\OneDrive\\Desktop\\WebApp\\Social Media\\SimpleCoder\\udemy\\awesome\\awesome-original\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2021-06-18T01:30:11.554Z] DEBUG: [runtime-status] [8592] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Users\\autsa\\OneDrive\\Desktop\\WebApp\\Social Media\\SimpleCoder\\udemy\\awesome\\awesome-original\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2021-06-18T01:30:11.559Z] DEBUG: [runtime-status] [8592] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2021-06-18T01:30:11.561Z] DEBUG: [runtime-status] [8592] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Users\\autsa\\OneDrive\\Desktop\\WebApp\\Social Media\\SimpleCoder\\udemy\\awesome\\awesome-original\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2021-06-18T01:30:12.193Z] DEBUG: [runtime-status] [8592] Checked functions.config() {"config":{}}
+[debug] [2021-06-18T01:30:12.193Z] DEBUG: [runtime-status] [8592] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Users\\autsa\\OneDrive\\Desktop\\WebApp\\Social Media\\SimpleCoder\\udemy\\awesome\\awesome-original\\functions\\node_modules\\firebase-functions\\lib\\index.js"}}
+[debug] [2021-06-18T01:30:12.195Z] DEBUG: [runtime-status] [8592] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Users\\autsa\\OneDrive\\Desktop\\WebApp\\Social Media\\SimpleCoder\\udemy\\awesome\\awesome-original\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2021-06-18T01:30:12.199Z] DEBUG: [runtime-status] [8592] Resolved module firebase-admin {"declared":true,"installed":true,"version":"9.3.0","resolution":"C:\\Users\\autsa\\OneDrive\\Desktop\\WebApp\\Social Media\\SimpleCoder\\udemy\\awesome\\awesome-original\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2021-06-18T01:30:12.201Z] DEBUG: [runtime-status] [8592] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Users\\autsa\\OneDrive\\Desktop\\WebApp\\Social Media\\SimpleCoder\\udemy\\awesome\\awesome-original\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2021-06-18T01:30:12.202Z] DEBUG: [runtime-status] [8592] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"9.3.0","resolution":"C:\\Users\\autsa\\OneDrive\\Desktop\\WebApp\\Social Media\\SimpleCoder\\udemy\\awesome\\awesome-original\\functions\\node_modules\\firebase-admin\\lib\\index.js"}}
+[debug] [2021-06-18T01:30:13.300Z] DEBUG: [runtime-status] [8592] initializeApp(DEFAULT) {"storageBucket":"awesome-9bbcd.appspot.com","databaseURL":"https://awesome-9bbcd.firebaseio.com","projectId":"awesome-9bbcd"}
+[warn] !  It looks like you're trying to access functions.config().stripe but there is no value there. You can learn more about setting up config here: https://firebase.google.com/docs/functions/local-emulator {"metadata":{"emulator":{"name":"functions"},"message":"It looks like you're trying to access functions.config().stripe but there is no value there. You can learn more about setting up config here: https://firebase.google.com/docs/functions/local-emulator"}}
+[warn] !  TypeError: Cannot read property 'secret_key' of undefined
+    at Object.<anonymous> (C:\Users\autsa\OneDrive\Desktop\WebApp\Social Media\SimpleCoder\udemy\awesome\awesome-original\functions\lib\index.js:19:48)
+    at Module._compile (internal/modules/cjs/loader.js:1063:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+    at Module.load (internal/modules/cjs/loader.js:928:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+    at Module.require (internal/modules/cjs/loader.js:952:19)
+    at require (internal/modules/cjs/helpers.js:88:18)
+    at initializeRuntime (C:\Users\autsa\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:684:29)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async handleMessage (C:\Users\autsa\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:722:20) {"metadata":{"emulator":{"name":"functions"},"message":"TypeError: Cannot read property 'secret_key' of undefined\n    at Object.<anonymous> (C:\\Users\\autsa\\OneDrive\\Desktop\\WebApp\\Social Media\\SimpleCoder\\udemy\\awesome\\awesome-original\\functions\\lib\\index.js:19:48)\n    at Module._compile (internal/modules/cjs/loader.js:1063:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)\n    at Module.load (internal/modules/cjs/loader.js:928:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:769:14)\n    at Module.require (internal/modules/cjs/loader.js:952:19)\n    at require (internal/modules/cjs/helpers.js:88:18)\n    at initializeRuntime (C:\\Users\\autsa\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:684:29)\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)\n    at async handleMessage (C:\\Users\\autsa\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:722:20)"}}
+[warn] !  We were unable to load your functions code. (see above)
+   - It appears your code is written in Typescript, which must be compiled before emulation.
+   - You may be able to run "npm run build" in your functions directory to resolve this. {"metadata":{"emulator":{"name":"functions"}}}
+[debug] [2021-06-18T01:30:13.337Z] DEBUG: [worker-~diagnostic~-35ca5bfa-9126-43e5-b7cf-3df391693e54]: exited
+[debug] [2021-06-18T01:30:13.337Z] DEBUG: [worker-~diagnostic~-35ca5bfa-9126-43e5-b7cf-3df391693e54]: FINISHED
