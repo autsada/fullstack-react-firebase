@@ -18,6 +18,7 @@ export type Address = {
   address1: string
   address2?: string
   city: string
+  state?: string
   zipCode: string
   phone: string
 }
@@ -121,9 +122,9 @@ export type CreatePaymentIntentData = {
 export type CreatePaymentMethod =
   | string
   | Pick<
-      CreatePaymentMethodCardData,
-      'card' | 'billing_details' | 'metadata' | 'payment_method'
-    >
+    CreatePaymentMethodCardData,
+    'card' | 'billing_details' | 'metadata' | 'payment_method'
+  >
 
 export type UserCards = { data: PaymentMethod[] }
 

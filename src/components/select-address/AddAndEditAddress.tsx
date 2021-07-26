@@ -117,6 +117,16 @@ const AddAndEditAddress: React.FC<Props> = ({
         error={errors.city?.message}
       />
       <Input
+        label='State'
+        name='state'
+        placeholder='State'
+        defaultValue={addressToEdit ? addressToEdit.state : ''}
+        ref={register({
+          required: 'City is required.',
+        })}
+        error={errors.state?.message}
+      />
+      <Input
         label='Zipcode'
         name='zipCode'
         placeholder='Zip code'

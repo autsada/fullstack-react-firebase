@@ -20,7 +20,7 @@ const ShippingAddress: React.FC<Props> = ({
   setOpenDialog,
   setAddressToDelete,
 }) => {
-  const { fullname, address1, address2, city, zipCode, phone } = address
+  const { fullname, address1, address2, city, state, zipCode, phone } = address
 
   const history = useHistory()
 
@@ -30,7 +30,7 @@ const ShippingAddress: React.FC<Props> = ({
         <h4 className='header'>{fullname}</h4>
         <p className='paragraph'>{address1}</p>
         {address2 && <p className='paragraph'>{address2}</p>}
-        <p className='paragraph'>{city}</p>
+        <p className='paragraph'>{city} {state}</p>
         <p className='paragraph'>{zipCode}</p>
         <p className='paragraph'>{phone}</p>
       </div>

@@ -15,7 +15,7 @@ import { useDialog } from '../hooks/useDialog'
 import { Product } from '../types'
 import { formatAmount, isAdmin, isClient } from '../helpers'
 
-interface Props {}
+interface Props { }
 
 const ProductDetail: React.FC<Props> = () => {
   const {
@@ -84,9 +84,8 @@ const ProductDetail: React.FC<Props> = () => {
           <p className='paragraph'>
             Availability:{' '}
             <span
-              className={`paragraph--success ${
-                product.inventory === 0 ? 'paragraph--error' : undefined
-              }`}
+              className={`paragraph--success ${product.inventory === 0 ? 'paragraph--error' : undefined
+                }`}
             >
               {product.inventory} pcs
             </span>
@@ -162,17 +161,6 @@ const ProductDetail: React.FC<Props> = () => {
                 )
                 return
               }
-
-              // if (cart && cart.length > 0) {
-              //   const foundItem = cart.find(
-              //     (item) => item.product === product.id
-              //   )
-
-              //   if (foundItem && foundItem.quantity >= product.inventory) {
-              //     alert('Cannot add to cart, not enough inventory.')
-              //     return
-              //   }
-              // }
 
               // Add The Product To Cart
               const finished = await addToCart(
