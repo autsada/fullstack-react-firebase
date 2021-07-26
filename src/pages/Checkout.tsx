@@ -24,7 +24,7 @@ import {
 import { calculateCartAmount, calculateCartQuantity } from '../helpers'
 import { address_key } from './../components/select-address/ShippingAddress'
 
-interface Props {}
+interface Props { }
 
 const Checkout: React.FC<Props> = () => {
   const [orderSummary, setOrderSummary] = useState<{
@@ -233,7 +233,7 @@ const Checkout: React.FC<Props> = () => {
 
   if (!address) return <Redirect to='/buy/select-address' />
 
-  const { fullname, address1, address2, city, zipCode, phone } = address
+  const { fullname, address1, address2, city, state, zipCode, phone } = address
 
   return (
     <div className='page--checkout'>
@@ -295,7 +295,7 @@ const Checkout: React.FC<Props> = () => {
 
                 <div style={{ width: '30%' }}>
                   {method.id ===
-                  stripeCustomer?.invoice_settings.default_payment_method ? (
+                    stripeCustomer?.invoice_settings.default_payment_method ? (
                     <p className='paragraph--center paragraph--focus'>
                       Default
                     </p>
@@ -465,7 +465,7 @@ const Checkout: React.FC<Props> = () => {
           <p className='paragraph paragraph--focus'>{address1}</p>
           {address2 && <p className='paragraph paragraph--focus'>{address2}</p>}
           <p className='paragraph paragraph--focus'>
-            {city}, {zipCode}
+            {city} {state}, {zipCode}
           </p>
           <p className='paragraph paragraph--focus'>Tel: {phone}</p>
         </div>
@@ -537,10 +537,10 @@ const Checkout: React.FC<Props> = () => {
               setUserCards((prev) =>
                 prev
                   ? {
-                      data: prev.data.filter(
-                        (item) => item.id !== paymentMethod.id
-                      ),
-                    }
+                    data: prev.data.filter(
+                      (item) => item.id !== paymentMethod.id
+                    ),
+                  }
                   : prev
               )
             }
