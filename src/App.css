@@ -206,9 +206,9 @@
 
 .modal {
     position: absolute;
-    top: 5%;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     padding: 2rem;
     background: white;
     border-radius: 2px;
@@ -252,9 +252,19 @@
     text-align: center;
 }
 
+@media screen and (max-width: 735px) {
+    .modal {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
 @media screen and (max-width: 600px) {
     .modal {
-        top: 2%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     .modal--dialog {
@@ -736,7 +746,7 @@
 
 /* Sign up, Sign in */
 .modal--auth-form {
-    width: 35%;
+    width: 30%;
 }
 
 .social {
@@ -768,12 +778,6 @@
 
 .social-btn--google:hover {
     background-color: #d32f2f;
-}
-
-@media screen and (max-width: 1366px) {
-    .modal--auth-form {
-        width: 40%;
-    }
 }
 
 @media screen and (max-width: 735px) {

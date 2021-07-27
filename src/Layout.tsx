@@ -27,15 +27,18 @@ const Layout: React.FC<Props> = ({ children }) => {
     if (modal) {
       // Disable body scroll when the component is mounted
       const body = document.getElementsByTagName('body')[0]
+      const vh = window.innerHeight
 
       body.style.overflow = 'hidden'
       body.style.position = 'relative'
+      body.style.height = `${vh}px`
     } else {
       // Enable body scroll when the component is unmounted
       const body = document.getElementsByTagName('body')[0]
 
       body.style.overflow = 'auto'
       body.style.position = 'static'
+      body.style.height = `auto`
     }
   }, [modal])
 
