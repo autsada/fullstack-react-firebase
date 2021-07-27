@@ -23,8 +23,24 @@ const Layout: React.FC<Props> = ({ children }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location.pathname])
 
+  useEffect(() => {
+    if (modal) {
+      // Disable body scroll when the component is mounted
+      const body = document.getElementsByTagName('body')[0]
+
+      body.style.overflow = 'hidden'
+      body.style.position = 'relative'
+    } else {
+      // Enable body scroll when the component is unmounted
+      const body = document.getElementsByTagName('body')[0]
+
+      body.style.overflow = 'auto'
+      body.style.position = 'static'
+    }
+  }, [modal])
+
   return (
-    <div>
+    <div className='main-page'>
       <ViewContextProvider>
         <MainNav />
         {isUserDropdownOpen && <UserDropdown />}
