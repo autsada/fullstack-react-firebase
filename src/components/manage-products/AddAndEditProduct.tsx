@@ -264,8 +264,8 @@ const AddAndEditProduct: React.FC<Props> = ({
                     selectedFile
                       ? selectedFile.name
                       : productToEdit
-                      ? productToEdit.imageFileName
-                      : ''
+                        ? productToEdit.imageFileName
+                        : ''
                   }
                   ref={register({ required: 'Product image is required.' })}
                 />
@@ -273,9 +273,9 @@ const AddAndEditProduct: React.FC<Props> = ({
 
               <Button
                 width='30%'
-                height='100%'
+                height='4rem'
                 type='button'
-                style={{ borderRadius: '0', border: '1px solid #282c3499' }}
+                style={{ border: '1px solid #282c3499' }}
                 onClick={handleOpenUploadBox}
               >
                 <span className='paragraph--small'>Select image</span>
@@ -297,7 +297,7 @@ const AddAndEditProduct: React.FC<Props> = ({
           </div>
 
           {/* Category */}
-          <div className='form__input-container'>
+          <div className='form__input-container' style={{ marginTop: '2.5rem' }}>
             <label htmlFor='Category' className='form__input-label'>
               Category
             </label>
@@ -344,6 +344,7 @@ const AddAndEditProduct: React.FC<Props> = ({
           <Button
             className='btn--orange'
             width='100%'
+            height='4rem'
             style={{ marginTop: '1rem' }}
             loading={loading}
             disabled={loading}
