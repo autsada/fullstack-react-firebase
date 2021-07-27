@@ -252,15 +252,11 @@
     text-align: center;
 }
 
-@media screen and (max-width: 735px) {
-    .modal {
-        top: 5%;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-}
-
 @media screen and (max-width: 600px) {
+    .modal {
+        top: 2%;
+    }
+
     .modal--dialog {
         width: 90%;
     }
