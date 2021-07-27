@@ -9,7 +9,7 @@ import { useAuthContext } from '../../state/auth-context'
 import { useSearchContext } from '../../state/search-context'
 import { useSearchItems } from '../../hooks/useSearchItems'
 
-interface Props {}
+interface Props { }
 
 const MainNav: React.FC<Props> = () => {
   const {
@@ -55,7 +55,7 @@ const MainNav: React.FC<Props> = () => {
       <div className='head__section'>
         <div className='head__logo'>
           <NavLink to='/'>
-            <h2 className='header header--logo'>AwesomeShop</h2>
+            <h1 className='header header--logo'>Awesome</h1>
           </NavLink>
         </div>
 
@@ -86,6 +86,7 @@ const MainNav: React.FC<Props> = () => {
           </div>
           <Button
             className='btn--search'
+            height='4rem'
             loading={loading}
             disabled={loading}
             onClick={handleSearch}

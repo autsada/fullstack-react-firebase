@@ -64,24 +64,30 @@ const ManageUsers: React.FC<Props> = ({ userInfo }) => {
     <div className='page--manage-users'>
       <h2 className='header--center'>Manage users</h2>
 
-      <Pagination page={page} totalPages={totalPages} />
+      <div className='pagination-container'>
+        <Pagination page={page} totalPages={totalPages} />
+      </div>
 
       <table className='table table--manage-users'>
         <thead>
           <tr>
             {/* Header */}
-            <th className='table-cell' style={{ width: '20%' }} rowSpan={2}>
+            <th className='table-cell' style={{ width: '15%' }} rowSpan={2}>
               Name
             </th>
-            <th className='table-cell' style={{ width: '25%' }} rowSpan={2}>
+            <th className='table-cell' style={{ width: '20%' }} rowSpan={2}>
               Email
             </th>
-            <th className='table-cell' rowSpan={2}>
+            <th className='table-cell table-cell--hide' rowSpan={2}>
               Created At
             </th>
 
-            <th className='table-cell' style={{ width: '25%' }} colSpan={3}>
+            <th className='table-cell' style={{ width: '30%' }} colSpan={3}>
               Role
+            </th>
+
+            <th className='table-cell' rowSpan={2}>
+              Edit
             </th>
           </tr>
 

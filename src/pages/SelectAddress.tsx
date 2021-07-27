@@ -11,7 +11,7 @@ import { useDialog } from '../hooks/useDialog'
 import { useManageShippingAddress } from '../hooks/useManageShippingAddress'
 import { Address } from '../types'
 
-interface Props {}
+interface Props { }
 
 const SelectAddress: React.FC<Props> = () => {
   const {
@@ -24,9 +24,9 @@ const SelectAddress: React.FC<Props> = () => {
   const [addressToEdit, setAddressToEdit] = useState<Address | null>(null)
   const [addressToDelete, setAddressToDelete] = useState<Address | null>(null)
 
-  if (!cart || (cart && cart.length === 0)) return <Redirect to='/' />
+  if (!userInfo || !cart) return <Spinner color='grey' height={50} width={50} />
 
-  if (!userInfo) return <Spinner color='grey' height={50} width={50} />
+  if (cart && cart.length === 0) return <Redirect to='/' />
 
   return (
     <div className='page--select-address'>
@@ -35,7 +35,7 @@ const SelectAddress: React.FC<Props> = () => {
       <div className='select-address'>
         <div className='select-address__existing'>
           {!userInfo?.shippingAddresses ||
-          userInfo.shippingAddresses.length === 0 ? (
+            userInfo.shippingAddresses.length === 0 ? (
             <p className='paragraph'>No address, please add one.</p>
           ) : (
             userInfo.shippingAddresses.map((address, index) => (

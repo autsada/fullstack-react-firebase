@@ -27,7 +27,7 @@ const SocialMediaLogin: React.FC<Props> = ({ socialLogin, loading }) => {
       <Button
         className='social-btn social-btn--fb'
         width='100%'
-        height='3rem'
+        height='4rem'
         onClick={() => handleSocialLogin('facebook')}
         disabled={loading}
       >
@@ -37,7 +37,7 @@ const SocialMediaLogin: React.FC<Props> = ({ socialLogin, loading }) => {
       <Button
         className='social-btn social-btn--google'
         width='100%'
-        height='3rem'
+        height='4rem'
         onClick={() => handleSocialLogin('google')}
         disabled={loading}
       >

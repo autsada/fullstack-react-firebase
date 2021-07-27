@@ -10,7 +10,7 @@ import { AuthUser, UserInfo } from '../types'
 import { auth } from '../firebase/config'
 import { usersRef, snapshotToDoc } from '../firebase'
 
-interface Props {}
+interface Props { }
 
 type FETCH_AUTH_USER = { type: 'FETCH_AUTH_USER'; payload: AuthUser | null }
 type OPEN_USER_DROPDOWN = { type: 'OPEN_USER_DROPDOWN'; payload: boolean }
@@ -24,7 +24,6 @@ type AuthActions =
   | OPEN_USER_DROPDOWN
   | FETCH_USER_INFO
   | SIGNOUT_REDIRECT
-  // | SET_USER_ROLE
   | FINISH_AUTH_CHECK
 
 type AuthState = {
@@ -99,12 +98,6 @@ const authReducer = (state: AuthState, action: AuthActions): AuthState => {
         signoutRedirect: action.payload,
       }
 
-    // case 'SET_USER_ROLE':
-    //   return {
-    //     ...state,
-    //     userRole: action.payload,
-    //   }
-
     case 'FINISH_AUTH_CHECK':
       return {
         ...state,
@@ -132,13 +125,6 @@ const AuthContextProvider: React.FC<Props> = ({ children }) => {
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
-        // user
-        //   .getIdTokenResult()
-        //   .then((result) => {
-        //     const role = result.claims.role as Role
-        //     authDispatch(setUserRole(role))
-        //   })
-        //   .catch(() => authDispatch(setUserRole(null)))
         authDispatch(fetchAuthUser(user))
       } else {
         authDispatch(fetchAuthUser(null))

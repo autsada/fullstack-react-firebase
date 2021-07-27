@@ -9,7 +9,7 @@ import { useAuthenticate } from '../../hooks/useAuthenticate'
 import { SignupData } from '../../types'
 import SocialMediaLogin from './SocialMediaLogin'
 
-interface Props {}
+interface Props { }
 
 const Signin: React.FC<Props> = () => {
   const { setModalType } = useModalContext()
@@ -82,7 +82,7 @@ const Signin: React.FC<Props> = () => {
             })}
           />
 
-          <Button loading={loading} width='100%' style={{ margin: '0.5rem 0' }}>
+          <Button loading={loading} width='100%' height='4rem' style={{ margin: '0.5rem 0' }}>
             Submit
           </Button>
 
@@ -100,7 +100,7 @@ const Signin: React.FC<Props> = () => {
           instead.
         </p>
 
-        <p className='paragraph paragraph--focus paragraph--small'>
+        <p className='paragraph paragraph--focus paragraph--small paragraph--forgot-password'>
           Forgot your password? Click{' '}
           <span
             className='paragraph--orange paragraph--link'

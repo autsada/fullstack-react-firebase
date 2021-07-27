@@ -7,7 +7,7 @@ import { useViewContext } from '../../state/view-context'
 import { useCartContext } from '../../state/cart-context'
 import { isClient, calculateCartQuantity } from '../../helpers'
 
-interface Props {}
+interface Props { }
 
 const LoggedInNav: React.FC<Props> = () => {
   const {
@@ -26,7 +26,7 @@ const LoggedInNav: React.FC<Props> = () => {
               <FontAwesomeIcon
                 icon={['fas', 'cart-arrow-down']}
                 color='white'
-                size='lg'
+                size='2x'
               />
             </NavLink>
             <div className='cart-qty'>

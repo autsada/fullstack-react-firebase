@@ -147,7 +147,7 @@ const AddAndEditAddress: React.FC<Props> = ({
         error={errors.phone?.message}
       />
 
-      <Button width='100%' loading={loading} disabled={loading}>
+      <Button width='100%' height='4rem' loading={loading} disabled={loading}>
         Submit
       </Button>
 

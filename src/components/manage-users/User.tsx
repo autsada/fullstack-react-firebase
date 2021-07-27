@@ -32,17 +32,17 @@ const User: React.FC<Props> = ({
   return (
     <tr>
       {/* User name */}
-      <td className='table-cell' style={{ width: '20%' }}>
+      <td className='table-cell' style={{ width: '15%' }}>
         {username}
       </td>
 
       {/* Email */}
-      <td className='table-cell' style={{ width: '25%' }}>
+      <td className='table-cell' style={{ width: '20%' }}>
         {email}
       </td>
 
       {/* CreatedAt */}
-      <td className='table-cell'>
+      <td className='table-cell table-cell--hide'>
         {createdAt && createdAt.toDate().toDateString()}
       </td>
 

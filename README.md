@@ -1,6 +1,6 @@
 # Full-Stack eCommerce App
 
-## Website
+## Demo
 https://awesome-9bbcd.web.app/
 
 ## Technologies Stack
@@ -11,11 +11,16 @@ https://awesome-9bbcd.web.app/
 - Cloudinary
 - SendGrid
 - ShipStation
+- Algolia
 
 ## Usage
 **Credit cards for testing**
 - 4242424242424242
 - 5555555555554444
+
+**User for admin area testing**
+- email: ```tim@test.com```
+- password: ```abc123```
 
 ## Clone and Test Locally
 1. Env for react app
@@ -28,7 +33,6 @@ https://awesome-9bbcd.web.app/
     REACT_APP_messagingSenderId="FIREBASE_PROJECT_MESSAGE_SENDER_ID"
     REACT_APP_appId="FIREBASE_PROJECT_APP_ID"
     REACT_APP_STRIPE_PUBLISHABLE_KEY='STRIPE_PUBLISHABLE_KEY'
-    REACT_APP_STRIPE_SECRET_KEY='STRIPE_SECRET_KEY'
     ```
 2. Env in Cloud Functions
     ```

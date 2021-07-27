@@ -15,7 +15,7 @@ import {
   formatAmount,
 } from '../helpers'
 
-interface Props {}
+interface Props { }
 
 const MyCart: React.FC<Props> = () => {
   const { cart } = useCartContext()
@@ -82,6 +82,7 @@ const MyCart: React.FC<Props> = () => {
 
         <Button
           width='100%'
+          height='4rem'
           className='btn--orange'
           style={{ margin: '1rem 0' }}
           onClick={() => history.push('/buy/select-address')}

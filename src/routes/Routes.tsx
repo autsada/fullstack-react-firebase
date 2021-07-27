@@ -10,9 +10,9 @@ import OrderRoutes from './OrderRoutes'
 import AdminRoutes from './AdminRoutes'
 import PrivateRoute from './PrivateRoute'
 
-interface Props {}
+interface Props { }
 
-const routes: React.FC<Props> = () => {
+const Routes: React.FC<Props> = () => {
   return (
     <Switch>
       <Route path='/buy'>
@@ -46,4 +46,4 @@ const routes: React.FC<Props> = () => {
   )
 }
 
-export default routes
+export default Routes

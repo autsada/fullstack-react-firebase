@@ -345,40 +345,36 @@ const Checkout: React.FC<Props> = () => {
               />
 
               <h4
-                className='paragraph paragraph--bold'
-                style={{ width: '30%' }}
+                className='paragraph paragraph--bold paragraph--new-card'
+                style={{ width: '40%' }}
               >
                 Use new card
               </h4>
 
-              <p className='paragraph' style={{ width: '5%' }}>
+              <p className='paragraph' style={{ width: '10%' }}>
                 {' '}
               </p>
 
-              <div className='new-card__logo' style={{ width: '45%' }}>
+              <div className='new-card__logo' style={{ width: '40%' }}>
                 <FontAwesomeIcon
                   icon={['fab', 'cc-visa']}
-                  size='1x'
+                  size='lg'
                   style={{ margin: '0 0.5rem' }}
                   color='#206CAB'
                 />
                 <FontAwesomeIcon
                   icon={['fab', 'cc-mastercard']}
-                  size='1x'
+                  size='lg'
                   style={{ margin: '0 0.5rem' }}
                   color='#EB2230'
                 />
                 <FontAwesomeIcon
                   icon={['fab', 'cc-amex']}
-                  size='1x'
+                  size='lg'
                   style={{ margin: '0 0.5rem' }}
                   color='#099DD9'
                 />
               </div>
-
-              <p className='paragraph' style={{ width: '10%' }}>
-                {' '}
-              </p>
             </label>
 
             {useCard.type === 'new' && (
@@ -403,7 +399,7 @@ const Checkout: React.FC<Props> = () => {
                   <CardElement
                     options={{
                       style: {
-                        base: { color: 'blue', iconColor: 'blue' },
+                        base: { color: 'blue', iconColor: 'blue', textAlign: 'center' },
                         invalid: { color: 'red', iconColor: 'red' },
                       },
                     }}
@@ -431,7 +427,7 @@ const Checkout: React.FC<Props> = () => {
                   {openSetDefault && (
                     <div className='form__input-container'>
                       <input type='checkbox' name='setDefault' ref={register} />
-                      <label htmlFor='setDefault' className='paragraph'>
+                      <label htmlFor='setDefault' className='paragraph paragraph--set-default'>
                         Set as default
                       </label>
                     </div>
@@ -493,6 +489,7 @@ const Checkout: React.FC<Props> = () => {
         <div className='summary__section'>
           <Button
             width='100%'
+            height='4rem'
             className='btn--orange btn--payment'
             onClick={handleClickBtn}
             disabled={!stripe || !useCard || disabled || loading}

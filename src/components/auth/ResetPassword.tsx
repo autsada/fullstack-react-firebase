@@ -7,7 +7,7 @@ import { useModalContext } from '../../state/modal-context'
 import { useAuthenticate } from '../../hooks/useAuthenticate'
 import { SignupData } from '../../types'
 
-interface Props {}
+interface Props { }
 
 const ResetPassword: React.FC<Props> = () => {
   const { setModalType } = useModalContext()
@@ -28,9 +28,9 @@ const ResetPassword: React.FC<Props> = () => {
         <div className='modal-close' onClick={() => setModalType('close')}>
           &times;
         </div>
-        <h5 className='header--center paragraph--orange'>
-          Enter your email below to reset your password.
-        </h5>
+        <h3 className='paragraph--orange'>
+          Enter your email below.
+        </h3>
         <form className='form' onSubmit={handleResetPassword}>
           <Input
             name='email'
@@ -41,7 +41,7 @@ const ResetPassword: React.FC<Props> = () => {
             })}
           />
 
-          <Button loading={loading} width='100%' style={{ margin: '0.5rem 0' }}>
+          <Button loading={loading} width='100%' height='4rem' style={{ margin: '0.5rem 0' }}>
             Submit
           </Button>
 

@@ -10,7 +10,7 @@ import { OrderTab } from '../types'
 
 export const orderTabType = 'type'
 
-interface Props {}
+interface Props { }
 
 const Orders: React.FC<Props> = () => {
   const {
@@ -62,16 +62,16 @@ const Orders: React.FC<Props> = () => {
       <div className='orders-details'>
         <div className='orders-content'>
           <div className='orders-column'>
-            <h3 className='header--center'>Purchased date</h3>
+            <h3 className='header--center orders-head'>Purchased date</h3>
           </div>
           <div className='orders-column'>
-            <h3 className='header--center'>Quantity</h3>
+            <h3 className='header--center orders-head'>Quantity</h3>
           </div>
           <div className='orders-column'>
-            <h3 className='header--center'>Amount ($)</h3>
+            <h3 className='header--center orders-head'>Amount ($)</h3>
           </div>
           <div className='orders-column'>
-            <h3 className='header--center'>Shipment status</h3>
+            <h3 className='header--center orders-head'>Shipment status</h3>
           </div>
         </div>
 

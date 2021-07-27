@@ -15,7 +15,7 @@ import { orderTabs } from '../helpers'
 
 const ordersPerPage = 10
 
-interface Props {}
+interface Props { }
 
 const ManageOrders: React.FC<Props> = () => {
   const {
@@ -108,22 +108,22 @@ const ManageOrders: React.FC<Props> = () => {
       <div className='orders-details'>
         <div className='orders-content'>
           <div className='orders-column'>
-            <h3 className='header--center'>Purchased date</h3>
+            <h3 className='header--center orders-head'>Purchased date</h3>
           </div>
           <div className='orders-column orders-column--hide'>
-            <h3 className='header--center'>Quantity</h3>
+            <h3 className='header--center orders-head'>Quantity</h3>
           </div>
           <div className='orders-column'>
-            <h3 className='header--center'>Amount ($)</h3>
+            <h3 className='header--center orders-head'>Amount ($)</h3>
           </div>
           <div className='orders-column'>
-            <h3 className='header--center'>Shipment status</h3>
+            <h3 className='header--center orders-head'>Shipment status</h3>
           </div>
           <div className='orders-column orders-column--hide'>
-            <h3 className='header--center'>Buyer</h3>
+            <h3 className='header--center orders-head'>Buyer</h3>
           </div>
           <div className='orders-column orders-column--manage'>
-            <h3 className='header--center'>Manage order</h3>
+            <h3 className='header--center orders-head'>Manage order</h3>
           </div>
         </div>
 
