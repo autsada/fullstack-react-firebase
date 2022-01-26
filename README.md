@@ -8,8 +8,6 @@ https://awesome-9bbcd.web.app/
 - React
 - Firebase
 - Stripe
-- Cloudinary
-- SendGrid
 - ShipStation
 - Algolia
 
